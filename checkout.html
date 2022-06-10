@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkout</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.typekit.net/noy2hmp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <script src="main.js" defer></script>
+    
+</head>
+
+<body class="checkout-background">
+    <div class="page-container-checkout">
+        <div class="content-wrap">
+            <header>
+                <!-- Animated logo -->
+                <div class="logo-img-animate">
+                    <a href="index.html" class="nav-bar-logo">
+                        <img src="images/icons/blacklogobar-02-01.png" alt="spinning endless chaos records logo">
+                    </a>
+                </div>
+                <div class="logo-img">
+                    <a href="index.html" class="nav-bar-text">
+                        <img src="images/icons/blacklogobar-01.png" alt="into endless chaos records branding">
+                    </a>
+                </div>
+                
+                <!-- Navbar -->
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn-checkout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MENU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <div class ="dropdown-content black-outline"> 
+                            <li class = "menu-text"><a class="checkout" href="about.html">About</a></li>
+                            <hr class = "black">    
+                            <li class = "menu-text"><a class="checkout" href="artists.html">Our Artists</a></li>
+                            <hr class = "black">    
+                            <li class = "menu-text"><a class="checkout" href="shop.html">Record Shop</a></li>
+                            <hr class = "black">    
+                            <li class = "menu-text"><a class="checkout" href="index.html">Home</a></li>
+                            <hr class = "black">    
+                            <li class = "menu-text"><a class="checkout" href="cart.html">Cart</a></li>
+                        </div>
+                    </div>
+                    <h3 class="cart-right"><a class="back-link" onclick="history.back()" >Back</a></h3>
+                </div>
+            </header>
+
+            <h1 class="circled">Checkout</h1>
+            <hr class = "black">  
+
+            <!-- Cart items -->
+            <div class="half-container">
+                <div class="left-box top-padding min-width max-width">
+                    <!-- Left side, address form -->
+                    <!-- Form input reference: Codelab Address Form best practices. 
+                    Copyright 2020 Google LLC. SPDX-License-Identifier: Apache-2.0 -->
+                   
+                    <form action="#" method="post">
+                        <h6 class="line-height-small checkout always-left">Billing/Shipping</h1>
+                            <!-- Name input -->
+                            <section>
+                                <label for="name">Full Name</label>
+                                <input id="name" name="name" autocomplete="name" maxlength="99" pattern="[\p{L} \-\.]+" required>
+                            </section>
+                             
+                            <!-- address input -->
+                            <section>
+                                <label for="address">Street address</label>
+                                <textarea id="address" name="address" autocomplete="address" maxlength="300" required></textarea>
+                            </section>
+                            
+                            <!-- country input (only option is australia) -->
+                            <div class="columns space-between">  
+                                <section>
+                                    <label for="postcode">Postcode</label>
+                                    <input id="postcode" name="postcode"
+                                      autocomplete="postcode" maxlength="8">
+                                </section>
+
+                                <section id="countries left-box">
+                                    <label for="">Country</label>
+                                    <select id="country" name="country" autocomplete="country" required>
+                                        <option selected value="SPACER"> </option>
+                                        <option value="AF">Australia</option>
+                                    </select>
+                                </section>
+                                
+                                <!-- state input -->    
+                                <section id="states right-box">
+                                    <label for="">State</label>
+                                    <select id="state" name="state" autocomplete="state"
+                                    required>
+                                        <option selected value="SPACER"> </option>
+                                        <option value="AF">ACT</option>
+                                        <option value="AX">NSW</option>
+                                        <option value="AL">VIC</option>
+                                        <option value="DZ">QLD</option>
+                                        <option value="AS">TAS</option>
+                                        <option value="DZ">NT</option>
+                                        <option value="AS">SA</option>
+                                    </select>
+                                </section>
+                            </div>   
+                            
+                            <!-- phone number input -->
+                            <section>
+                                <label for="tel">Telephone</label>
+                                <input id="tel" name="tel" autocomplete="tel" type="tel"
+                                  maxlength="12" minlength="8" pattern="[\d \-\+]+" required>
+                            </section>
+
+                             <!-- email input -->
+                             <section>
+                                <label for="email">Email</label>
+                                <input id="email" name="email"
+                                  autocomplete="email" maxlength="45">
+                            </section>
+                            
+
+                        <button class="forms" id="save-address">Save address</button>
+                        
+                    </form>
+                    
+                </div>
+
+                <!-- right side, credit card and total -->
+                <div class="right-box small-padding min-width"> 
+                    <form action="#" method="post">
+                        <h6 class="line-height-small checkout always-left">Payment Details</h1>
+                            <!-- credit card input -->
+                            <section>
+                                <label for="credit">Credit Card Number</label>
+                                <input id="credit" name="credit" type="text" inputmode="numeric"
+                                  maxlength="16" minlength="16" pattern="[\d \-\+]+" required>
+                            </section>
+                            
+                            <!-- credit card expiry input -->
+                            <section>
+                                <label for="expiry">Expiry Date MMYY</label>
+                                <input id="expiry" name="expiry" type="text" inputmode="numeric"
+                                  maxlength="4" minlength="4" pattern="[\d \-\+]+" enterkeyhint="done" required>
+                            </section>
+                            
+                            <!-- credit card CVV input -->
+                            <section>
+                                <label for="cvv">CVV</label>
+                                <input id="cvv" name="cvv" type="text" inputmode="numeric"
+                                  maxlength="4" minlength="3" pattern="[\d \-\+]+" enterkeyhint="done" required>
+                            </section>
+                            
+
+                        <button class="forms" id="save-address">Verify Payment Method</button>
+                    </form>
+                    
+                    <div class="columns margin-top top-padding">
+                        <h5 class="checkout">Total</h5>
+                        <h5 class="checkout">$217.00</h5>
+                    </div>
+                    <hr class="black">
+
+                    <p id="free-shipping-message" class="text-justify checkout">
+                        Good news! Shipping and handling is free for this order because you've spent over $100.
+                    </p>    
+                    
+                    
+
+                    <div class="columns margin-top-small">
+                        <!-- tracklist -->
+                        <div class="left-box">
+                        </div>
+
+                        <div class="right-box">
+                            <h2><a href = "confirmation.html" id="place-order" class = "checkout-link checkout" >Place Order</a></h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        
+            <hr class = "black margin-top-small"> 
+
+
+        </div>
+            
+
+        <!-- Footer -->    
+        <footer class="footer-checkout">
+            <div class="footer-img-checkout">
+                <img src="images/icons/basic-logo.png" alt="into endless chaos records branding">
+            </div> 
+        </footer>
+    </div>
+
+</body>
+</html>

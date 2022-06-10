@@ -1,0 +1,482 @@
+@import "shades.css";
+@import "typography.css";
+
+/* Box model fix for whole website (Paul Irish Box sizing Border Box FTW */
+
+html{
+    box-sizing: border-box;
+}
+*, *:before, :after {
+    box-sizing: inherit;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+.content-wrap{
+    padding-bottom: 20rem;
+}
+.footer-test{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 22rem;
+}
+
+/* nav bar */
+.navbar {
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*  dropdown */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown, .dropbtn{
+    border: none;
+    outline: none;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    background-color: inherit;
+    padding-left: 0%;
+    padding-top: 0.75rem;
+    color: var(--color-text);
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-menu);
+    min-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    border: 1px solid var(--color-line);
+}
+
+@media screen and (min-width: 500px){
+    .dropdown-content {
+        min-width: 50%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .dropdown-content  {
+        min-width: 30%;
+        max-height: 100%;
+    }
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: var(--color-text-menu);
+    padding: 2vh;
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn:hover{
+    color: var(--color-btn-hover);
+}
+
+/* nav bar home logo */
+
+.logo-img{
+    display: block;
+    width: 11rem;
+    position: absolute;
+    top: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 0;
+}
+
+.logo-img-animate{
+    display: block;
+    width: 11rem;
+    position: absolute;
+    top: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    opacity: 0%;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform 0.8s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.logo-img-animate:hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    opacity: 100%;
+}
+
+.cart-right{
+    padding-right: 4%;
+    float: right;
+    padding-top: 0.75rem;
+}
+
+/* image container */
+.image-container{
+    margin: 0rem auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    opacity: 100%;
+}
+
+.center-bottom-text {
+    top: 50%;
+    text-align: center;
+    line-height: 1.5rem;
+    display: inline-block;
+}
+
+
+/* line */
+
+hr.red{
+    border: 0px solid var(--color-line);
+    height: 1px;
+    width: 100%;
+    background: var(--color-line);
+}
+
+.margin-top{
+    margin-top: 3rem;
+}
+
+.margin-top-small{
+    margin-top: 1rem;
+}
+
+hr.checkout{
+    border-top: 1px solid var(--color-checkout);
+}
+
+/* records shop */
+/* note: background colours here for troubleshooting purposes */
+
+.mini-record-shop{
+    padding: 0.3rem 0;
+    width: 50vw;
+    margin: 0rem auto;
+    /* background: green; */
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.record{
+    margin: 0.2rem auto;
+    /* background-color: blue; */
+    align-items: center;
+    min-width: max-content;
+}
+
+.record-content{
+    padding: 0.7rem;
+    /* background-color: aquamarine; */
+}
+
+.record-img{
+    width: 7rem;
+    height: 7rem;
+    margin: 0 auto;
+}
+  
+.record-name{
+    display: inline-block;
+    /* background-color: grey; */
+    width: 7rem;
+    align-items: center;
+}
+
+.all-records{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    grid-auto-columns:auto; 
+    justify-content: center;
+    grid-auto-rows: max-content;
+}
+
+.half-container{
+    display: flex;
+    max-width: 44rem;
+    justify-content: center;
+    margin-right: auto;
+    margin-left:auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.buttons{
+    height: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+    color: var(--color-text);
+    font-style: normal;
+}
+
+.active-button{
+    background: var(--color-btn);
+    text-decoration: underline;
+    color: var(--color-text);
+}
+.active-button:hover{
+    background: var(--color-btn);
+    text-decoration: underline;
+    color: var(--color-text);
+    font-style: normal;
+}
+
+.left-box{
+    max-width: 22rem;
+}
+
+.artist-image{
+    max-width:20rem;
+}
+
+.right-box{
+    max-width: 22rem;
+}
+
+.min-width{
+    min-width: 18rem;
+    max-width: 19rem;
+}
+
+.small-padding{
+    padding: 1rem;
+}
+
+.top-padding{
+    padding-top: 1rem;
+}
+
+.bottom-padding{
+    padding-bottom: 5rem;
+}
+
+.columns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin-right{
+    margin-right: 3rem;
+}
+
+.product-image{
+    padding: 0.5rem;
+    border: 1px solid var(--color-line);
+    width: 22rem;
+}
+
+
+/* image links */
+
+a.image-link{
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid var(--color-line);
+}
+
+/*  static dashed line border for record image hover. not used due to lack of animation  */
+/*  https://kovart.github.io/dashed-border-generator/ */
+/*
+a.image-link:hover{
+    display: block;
+    border: none;
+    width: 101%;
+    padding: 0.5rem;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C40000FF' stroke-width='1' stroke-dasharray='9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+} */
+
+/* css animation for hover links - created using an svg image inside background-image property */
+/* custom made using css code pen tool by Randeep Dhaliwal https://codepen.io/rdhaliwal/pen/KzMKOP */
+a.image-link:hover{
+    display: block;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-line) 50%, transparent 50%), 
+                linear-gradient(90deg, var(--color-line) 50%, transparent 50%), 
+                linear-gradient(0deg, var(--color-line) 50%, transparent 50%), 
+                linear-gradient(0deg, var(--color-line) 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 16px 1px, 16px 1px, 1px 16px, 1px 16px;
+    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+    padding: 0.5rem;
+    animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+    }
+}
+
+/* our artists  */
+
+.artists-container{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 100%;
+}
+
+/* footer  */
+
+.footer-img{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 4.5rem;
+    width: 9rem;
+    z-index: 0;
+    transition: 0.7s;
+}
+
+.footer-img:hover{
+    filter: drop-shadow(0 0 4rem var(--black));
+}
+
+.copyright{
+    float: left;
+    padding: 1rem;
+}
+
+.privacy{
+    float: right;
+    padding: 1rem;
+}
+
+
+
+
+/* Media Queries */
+/* Responsiveness */
+
+
+@media screen and (min-width: 370px){
+    .record-img{
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    .record-name{
+        width: 7.5rem;
+    }
+    .image-container{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 400px){
+    .record-img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .record-name{
+        width: 10rem;
+    }
+    .image-container{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .all-records{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: dense;
+        grid-auto-columns: auto;
+        justify-content: center;
+        grid-auto-rows: max-content;
+    }
+    .mini-record-shop{
+        padding: 1rem 0;
+        width: 40vw;
+    }
+    .record-img{
+        width: 8rem;
+        height: 8rem;
+    }
+    .record-name{
+        width: 8rem;
+    }
+    .image-container{
+        width: 75%;
+    }
+    .artists-container{
+        width: 25rem;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .all-records{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .mini-record-shop{
+        padding: 1rem 0;
+        width: 30vw;
+    }
+    .record-img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .record-name{
+        width: 10rem;
+    }
+    .image-container{
+        width: 60%;
+    }
+    .artists-container{
+        width: 30rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .record-img{
+        width: 11rem;
+        height: 11rem;
+    }
+    .record-name{
+        width: 11rem;
+    }
+    .image-container{
+        width: 50%;
+    }
+    .artists-container{
+        width: 30rem;
+    }
+}

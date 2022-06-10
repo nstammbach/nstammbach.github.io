@@ -1,0 +1,355 @@
+:root { 
+    /*declare fonts imported from adobe, for reference*/
+    font-family: freight-text-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: italic; 
+
+    font-family: freight-display-pro, serif;
+    font-weight: 500;
+    font-style: normal;
+    
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+}
+
+/* Set up relative responsive sizes based on rem */
+
+:root{
+    font-size: 0.9rem;
+}
+
+@media (min-width: 30rem) {
+    :root {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 45rem) {
+    :root {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 60rem) {
+    :root {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    :root {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 100rem) {
+    :root {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 120rem) {
+    :root {
+        font-size: 1.4rem;
+    }
+}
+
+/* Only one h1 per page */
+h1 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 0.8rem;
+}
+
+h2 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 0.8rem;
+}
+
+h3 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+
+h4, .menu-text {
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.menu-text {
+    font-size: 2rem;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+h5, .forms {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+}
+
+
+h6 {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+p {
+    font-family: freight-display-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/* capitalize headers and center text */
+
+h1, h2, h3, h4, h5, h6, .menu-text, .forms {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* extra text attributes for specific case */
+
+.line-height-small{
+    line-height: 2rem;
+}
+
+.line-height-large{
+    line-height: 4rem;
+}
+
+.line-height-larger{
+    line-height: 6rem;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.left-text{
+    text-align: center;
+}
+
+.right-text{
+    text-align: center;
+}
+
+.italics{
+    font-style: italic;
+}
+
+@media screen and (min-width: 600px) {
+    .left-text{
+        text-align: left;
+    }
+    .right-text{
+        text-align: right;
+    }
+}
+
+.always-left{
+    text-align: left;
+}
+
+.always-right{
+    text-align: right;
+}
+
+.text-justify{
+    text-align: justify;
+    text-justify: auto;
+}
+
+/* set up  colours */
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--color-text);
+}
+
+.checkout, .menu-text, .footer-text {
+    color: var(--color-text-checkout);
+}
+
+::selection {
+    background: var(--color-text-highlight);
+}
+
+
+/* hyperlink shop link */
+
+a.checkout-link {
+    outline: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: 1px solid var(--color-btn-hover);
+    border-radius: 50%;
+    margin: 0rem;
+    background-color: var(--color-btn-hover);
+    display:inline-block;
+}
+
+a.checkout-link:active {
+    color: var(--color-btn-hover);
+    text-decoration: none;
+    
+}
+a.checkout-link:focus {
+    text-decoration: none;
+    border: none;
+}
+
+a.checkout-link:hover {
+    text-decoration: none;
+    font-style: italic; 
+}
+
+
+/* hyperlink basic */
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 0px 0px 0;
+}
+
+a:link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:focus {
+    color: var(--color-btn-hover);
+    border-bottom: 1px solid;
+}
+
+a:hover {
+    color: var(--color-btn-hover);
+    text-decoration: none;
+    font-style: italic; 
+}
+
+a:active {
+    color: var(--color-btn-hover);
+    text-decoration: none;
+}
+
+/* mail:to */
+a.footer-text{
+    color: var(--color-text-checkout);
+    line-height: 1.2rem;
+    font-size: 0.85rem;
+}
+
+
+/* mail:to */
+a.footer-text{
+    color: var(--color-text-checkout);
+    line-height: 1.2rem;
+    font-size: 0.85rem;
+}
+
+/* buttons shop prototype */
+a.shop-button{
+    color: var(--color-text);
+    line-height: 1.2rem;
+    font-size: 0.85rem;
+}
+
+
+
+/* hyperlink shop link */
+
+a.shop-link {
+    outline: none;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    border: 1px solid var(--color-btn-hover);
+    border-radius: 50%;
+    margin: 0rem;
+    display:inline-block;
+}
+
+a.shop-link:link {
+    color: var(--color-text);
+}
+
+a.shop-link:focus {
+    color: var(--color-text-checkout);
+    background-color: var(--color-btn-hover);
+}
+
+a.shop-link:hover {
+    color: var(--color-text-checkout);
+    background-color: var(--color-btn-hover);
+    font-style: normal;
+}
+
+a.shop-link:active {
+    color: var(--color-btn-checkout);
+    background-color: var(--color-btn-hover);
+    text-decoration: none;
+}
+
+/* back link */
+
+a.back-link {
+    color: var(--color-text-checkout);
+    padding: 0.8rem 1rem;
+    display:inline-block;
+}
+a.back-link:link {
+    color: var(--color-text-checkout);
+}
+
+a.back-link:active {
+    text-decoration: none;
+    
+}
+a.back-link:focus {
+    text-decoration: none;
+    border: none;
+}
+
+a.back-link:hover {
+    text-decoration: none;
+    font-style: italic; 
+}

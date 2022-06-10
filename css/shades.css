@@ -1,0 +1,40 @@
+:root {  
+    /* Colour Palette */
+    --black: #000; 
+    --red: #C40000; /* Standard buttons */
+    --green: #C1F069; /* Brand Logo colour */
+    --dark-grey: #707070; /* Shadow */
+    --light-grey: #d1d1d1; /* Background colour */
+
+    /* typography */
+    --color-text: var(--light-grey);
+    --color-text-highlight: var(--red);
+    --color-text-checkout: var(--black);
+    --color-text-menu: var(--black);
+
+    /* feedback */
+    --color-error: var(--red);
+    
+    /* lines */
+    --color-line: var(--red);
+    --checkout-line: var(--black);
+    --checkout-color: var(--light-grey);
+
+    /* buttons */
+    --color-btn: var(--black);
+    --color-btn-hover: var(--green);
+    --color-btn-checkout: var(--green);
+    --color-btn-form: var(--light-grey);
+
+    /* background */
+    --color-menu: var(--light-grey);
+}
+
+/* background */
+
+body.black-red{
+    background-image: linear-gradient(180deg, var(--black) 0%, var(--black) 70%,
+    var(--red) 100%);
+    background-repeat: no-repeat;
+    background-color: var(--red);
+}
